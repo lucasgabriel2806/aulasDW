@@ -1,0 +1,35 @@
+/*
+    Este arquivo limpa o css proprietário do navegador
+*/
+
+/*
+* -> todos os elementos!
+::before -> pseudo elementos que venham antes
+::after -> pseudo elementos que venham depois
+*/
+
+*, 
+*::before, 
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+Daqui em diante, podemos definir css padrões
+para os elementos do HTML
+Ex: a{...}
+*/
+a {
+    text-decoration: none;
+    color: inherit; /* Pega a cor do elemento pai */
+}
