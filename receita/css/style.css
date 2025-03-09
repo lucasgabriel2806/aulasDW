@@ -1,3 +1,14 @@
+.titulo-principal {
+    text-align: center; 
+    background: #000; 
+    color: #fff;
+}
+
+.subtitulo {
+    background: #F3F3F3; 
+    border: 1px solid black;
+}
+
 img {
     display: block;
     margin: auto;
