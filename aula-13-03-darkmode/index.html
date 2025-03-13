@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    
+    <title>DarkMode</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+
+    <link rel="stylesheet" href="css/color.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!--NavBar-->
+    <nav class="navbar">
+        <div class="logo">
+            Logo Legal
+        </div>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+        <div onclick="toggleDarkMode()" class="dark-mode-toggle">Dark Mode</div>
+    </nav>
+
+    <!--Seção de Cards-->
+    <section class="cards">
+        <div class="card">
+            <h3>Card 1</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, doloremque magnam! Aperiam, impedit corporis facilis qui fuga sint alias error, omnis voluptate officia temporibus et esse exercitationem explicabo delectus blanditiis!
+            </p>
+        </div><!--FIM Card 1-->
+
+        <div class="card">
+            <h3>Card 2</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, doloremque magnam! Aperiam, impedit corporis facilis qui fuga sint alias error, omnis voluptate officia temporibus et esse exercitationem explicabo delectus blanditiis!
+            </p>
+        </div><!--FIM Card 2-->
+
+        <div class="card">
+            <h3>Card 3</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, doloremque magnam! Aperiam, impedit corporis facilis qui fuga sint alias error, omnis voluptate officia temporibus et esse exercitationem explicabo delectus blanditiis!
+            </p>
+        </div><!--FIM Card 3-->
+    </section>
+
+    <footer>
+        <p>Lucas Gabriel de Paula Pinto - 2025</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        function toggleDarkMode() {
+            /* Se tem a classe dark-mode, ele remove
+            Se não tem essa classe, ele adiciona. */
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+
+</body>
+
+</html>
