@@ -17,18 +17,20 @@
 
 <body>
 
-    <!--NavBar-->
-    <nav class="navbar">
-        <div class="logo">
-            Logo Legal
-        </div>
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Contato</a></li>
-        </ul>
-        <div onclick="toggleDarkMode()" class="dark-mode-toggle">Dark Mode</div>
-    </nav>
+    <header>
+        <!--NavBar-->
+        <nav class="navbar">
+            <div class="logo">
+                Logo Legal
+            </div>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+            <div onclick="toggleDarkMode()" class="dark-mode-toggle">Dark Mode</div>
+        </nav>
+    </header>
 
     <!--Seção de Cards-->
     <section class="cards">
@@ -59,13 +61,6 @@
     </footer>
 
     <script src="js/script.js"></script>
-    <script>
-        function toggleDarkMode() {
-            /* Se tem a classe dark-mode, ele remove
-            Se não tem essa classe, ele adiciona. */
-            document.body.classList.toggle('dark-mode');
-        }
-    </script>
 
 </body>
 

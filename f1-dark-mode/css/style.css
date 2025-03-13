@@ -1,0 +1,74 @@
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.navbar {
+    background-color: var(--navbar-bg);
+    color: var(--bg-color);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Logo da F175 na navbar */
+.navbar img {
+    width: 100px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+}
+
+.navbar ul li a {
+    color: var(--text-white);
+    text-decoration: none;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+    padding-top: 20px;
+}
+
+footer {
+    background-color: var(--footer-bg);
+    color: var(--text-white);
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.dark-mode-toggle {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border-radius: 10px;
+}

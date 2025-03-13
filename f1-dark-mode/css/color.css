@@ -1,0 +1,25 @@
+:root {
+
+    /* Var para os textos do navbar e footer 
+    que serão sempre brancos. 
+    Se usar a var --text-color, ele vai mudar pra uma
+    cor indesejada. */
+    --text-white: #fff;
+
+    /* Tema Claro */
+    --bg-color: #fff;
+    --text-color: #000;
+    --navbar-bg: #E10600;
+    --card-bg: #f3ecec;
+    --footer-bg: #30303f;
+
+    /* Tema Escuro */
+    body.dark-mode {
+      --bg-color: #000;
+      --text-color: #fff;
+      --navbar-bg: #dd342e;
+      --card-bg: #1e1e1e;
+      --footer-bg: #15151e;   
+    }   
+
+}
