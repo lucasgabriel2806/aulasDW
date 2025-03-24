@@ -17,7 +17,7 @@ let total;
 
 
 /** Botão de Soma */
-btnMais.addEventListener('click', function(event) {
+btnMais.addEventListener('click', function() {
 
     total = valor1 + valor2;
 
@@ -26,12 +26,30 @@ btnMais.addEventListener('click', function(event) {
 });
 
 /** Botão de Subtração */
-
 btnMenos.addEventListener('click', function(){
 
-    //total = 
+    total = valor1 - valor2;
+
+    result.innerHTML = total; 
 
 });
+
 /** Botão de Multiplicação */
+btnMult.addEventListener('click', function() {
+
+    total = valor1 * valor2;
+
+    result.innerHTML = total;
+
+});
+
 /** Botão de Divisão */
+btnDiv.addEventListener('click', function() {
+
+    total = valor1 / valor2;
+
+    result.innerHTML = total;
+
+});
+
 /** Botão de Resultado */
