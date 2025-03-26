@@ -20,6 +20,81 @@
             width: 100px;
             height: 2   0px;
         }
+
+        .item-1 {
+            grid-area: item-1;
+        }
+
+        .item-2 {
+            grid-area: item-2;
+        }
+
+        .item-3 {
+            grid-area: item-3;
+        }
+
+        .item-4 {
+            grid-area: item-4;
+        }
+
+        .item-5 {
+            grid-area: item-5;
+        }
+
+        .item-6 {
+            grid-area: item-6;
+        }
+
+        .item-7 {
+            grid-area: item-7;
+        }
+
+        .item-8 {
+            grid-area: item-8;
+        }
+
+        .item-9 {
+            grid-area: item-9;
+        }
+
+        .item-10 {
+            grid-area: item-10;
+        }
+
+        .item-11 {
+            grid-area: item-11;
+        }
+
+        .item-12 {
+            grid-area: item-12;
+        }
+
+        .item-13 {
+            grid-area: item-13;
+        }
+
+        .item-14 {
+            grid-area: item-14;
+        }
+
+        .item-15 {
+            grid-area: item-15;
+        }
+
+        .item-16 {
+            grid-area: item-16;
+        }
+
+        .container-calc {
+            display: grid;
+            max-width: 800px;
+            grid-template-areas: 
+            'item-1 item-2 item-3 item-4'
+            'item-5 item-6 item-7 item-8'
+            'item-9 item-10 item-11 item-12'
+            'item-13 item-14 item-15 item-16';
+        }
+
     </style>
 
 </head>
@@ -50,26 +125,27 @@
             0
         </div>
 
-        <button id="num7">7</button>
-        <button id="num8">8</button>
-        <button id="num9">9</button>
+        <button id="num7" class="item-1">7</button>
+        <button id="num8" class="item-2">8</button>
+        <button id="num9" class="item-3">9</button>
 
-        <button id="num4">4</button>
-        <button id="num5">5</button>
-        <button id="num6">6</button>
+        <button id="num4" class="item-5">4</button>
+        <button id="num5" class="item-6">5</button>
+        <button id="num6" class="item-7">6</button>
 
-        <button id="num1">1</button>
-        <button id="num2">2</button>
-        <button id="num3">3</button>
+        <button id="num1" class="item-9">1</button>
+        <button id="num2" class="item-10">2</button>
+        <button id="num3" class="item-11">3</button>
 
-        <button id="num0">0</button>
-        <button id="btnPonto">.</button>
-        <button id="btnResult">=</button>
+        <button id="num0" class="item-13">0</button>
+        <button id="btnPonto" class="item-14">.</button>
+        <button id="btnResult" class="item-15">=</button>
 
-        <button id="btnMais">+</button>
-        <button id="btnMenos">-</button>
-        <button id="btnMult">x</button>
-        <button id="btnDiv">/</button>
+        <!-- Botões de operação (lateral direita) -->
+        <button id="btnMais" class="item-4">+</button>
+        <button id="btnMenos" class="item-8">-</button>
+        <button id="btnMult" class="item-12">x</button>
+        <button id="btnDiv" class="item-16">/</button>
 
     </div>
 
