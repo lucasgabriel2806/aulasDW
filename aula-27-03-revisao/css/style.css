@@ -1,0 +1,86 @@
+table, tbody, tr, td {
+    border-collapse: collapse;
+}
+/* 
+table {
+    margin-bottom: 100px;
+} */
+
+.area .btn {
+    width: 100%;
+    min-width: 100px;
+    height: 100%;
+    min-height: 100px;
+    font-size: 30px;
+    font-weight: 900;
+    border: none;
+}
+
+.calculo {
+    text-align: right;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 30px;
+    background-color: #c1cec0;
+    font-family: 'Courier New', Courier, monospace;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;    
+}
+
+.resultado {
+    text-align: right;
+    padding: 10px;
+    font-weight: 900;
+    font-size: 40px;
+    background-color: #f0f0f0;
+    font-family: "VT323", monospace;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;  
+}
+
+.btn.limpar {
+    background-color: #f8ad9f;
+    color: crimson;
+    font-size: 40px;
+    border: 1px solid #f07b67;
+}
+
+.igual {
+    background-color: #c0e997;
+    color: #017501;
+    font-size: 50px;
+    border: 1px solid #8fcf63;
+}
+
+.numeros {
+    background-color: #b9cce9;
+    color: blue;
+    border: 1px solid #98b8e7;
+}
+
+.operacoes {
+    background-color: #4949eb;
+    color: #b9cce9;
+    font-size: 35px;
+    border: 1px solid #1f1ff8;
+}
+
+.btn:hover {
+    opacity: 0.5;
+}
+
+.area {
+    /** Normalmente usamos o vh e vw quando
+    queremos colocar o elemento no meio da página */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    /** Colocamos column pois o row teria um 
+    comportamento diferente, ao alinhar ao centro, 
+    o h1 ficaria ao lado da calculadora */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

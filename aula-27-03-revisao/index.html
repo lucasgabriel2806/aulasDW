@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+    <div class="area">
+ 
+    <h1>Calculadora</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <td colspan="4" class="calculo" id="calculo">2+2</td>
+            </tr>
+
+            <tr>
+                <td colspan="4" class="resultado" id="resultado">4</td>
+            </tr>
+
+            <tr>
+                <td colspan="3"><button type="button" id="limpar" class="btn limpar">C</button></td>
+                <td><button type="button" id="divisao" class="btn operacoes">/</button></td>
+            </tr>
+
+            <tr>
+                <td><button type="button" id="n7" class="btn numeros">7</button></td>
+                <td><button type="button" id="n8" class="btn numeros">8</button></td>
+                <td><button type="button" id="n9" class="btn numeros">9</button></td>
+                <td><button type="button" id="multiplicacao" class="btn operacoes">*</button></td>
+            </tr>
+
+            <tr>
+                <td><button type="button" id="n4" class="btn numeros">4</button></td>
+                <td><button type="button" id="n5" class="btn numeros">5</button></td>
+                <td><button type="button" id="n6" class="btn numeros">6</button></td>
+                <td><button type="button" id="subtracao" class="btn operacoes">-</button></td>
+            </tr>
+
+            <tr>
+                <td><button type="button" id="n1" class="btn numeros">1</button></td>
+                <td><button type="button" id="n2" class="btn numeros">2</button></td>
+                <td><button type="button" id="n3" class="btn numeros">3</button></td>
+                <td><button type="button" id="soma" class="btn operacoes">+</button></td>
+            </tr>
+
+            <tr>
+                <td><button type="button" id="n0" class="btn numeros">0</button></td>
+                <td colspan="3"><button type="button" id="igual" class="btn igual">=</button></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    </div>
+
+    <form action="#">
+        <input type="number" name="num1" id="num1" placeholder="Digite o primeiro número">
+        <input type="number" name="num2" id="num2" placeholder="Digite o segundo número"><br>
+        <button type="button" id="somar" class="btn operacoes">+</button>
+        <button type="button" id="sub" class="btn operacoes">-</button>
+        <button type="button" id="div" class="btn operacoes">/</button>        
+        <button type="button" id="mult" class="btn operacoes">*</button>
+    </form>
+
+
+
+    <h3 id="resultado2">Resultado: </h3>
+
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
