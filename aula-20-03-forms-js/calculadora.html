@@ -8,91 +8,83 @@
     <title>Calculadora JS</title>
 
     <style>
-        button {
-            display: block; 
-            margin-top: 10px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
-        #resultado {
-            border: 1px solid black;
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(60, 60, 60);
+        }
+
+        .container-calculadora {
+            color: #fff;
+            background-color: #000;
+            border: 2px solid black;
+            border-radius: 15px;
+            text-align: center;
+            width: 300px;
+            height: 450px;
+            padding: 20px;
+        }
+
+        .container-calculadora > #resultado {
+            width: 100%;
+            height: 50px;
+            margin-bottom: 10px;
             background-color: #fff;
-            padding: 5px;
-            width: 100px;
-            height: 2   0px;
+            color: #000;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            font-size: 2em;
+            padding-right: 10px;
+            overflow: hidden;
         }
 
-        .item-1 {
-            grid-area: item-1;
-        }
-
-        .item-2 {
-            grid-area: item-2;
-        }
-
-        .item-3 {
-            grid-area: item-3;
-        }
-
-        .item-4 {
-            grid-area: item-4;
-        }
-
-        .item-5 {
-            grid-area: item-5;
-        }
-
-        .item-6 {
-            grid-area: item-6;
-        }
-
-        .item-7 {
-            grid-area: item-7;
-        }
-
-        .item-8 {
-            grid-area: item-8;
-        }
-
-        .item-9 {
-            grid-area: item-9;
-        }
-
-        .item-10 {
-            grid-area: item-10;
-        }
-
-        .item-11 {
-            grid-area: item-11;
-        }
-
-        .item-12 {
-            grid-area: item-12;
-        }
-
-        .item-13 {
-            grid-area: item-13;
-        }
-
-        .item-14 {
-            grid-area: item-14;
-        }
-
-        .item-15 {
-            grid-area: item-15;
-        }
-
-        .item-16 {
-            grid-area: item-16;
-        }
-
-        .container-calc {
+        .container-calculadora > .container-btns {
             display: grid;
-            max-width: 800px;
-            grid-template-areas: 
-            'item-1 item-2 item-3 item-4'
-            'item-5 item-6 item-7 item-8'
-            'item-9 item-10 item-11 item-12'
-            'item-13 item-14 item-15 item-16';
+            gap: 10px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            height: 300px;
+        }
+
+        .container-calculadora > .container-btns > button {
+            border: 2px solid gray;
+            background-color: #575757;
+            font-size: 1.5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .container-btns > .num0 {
+            grid-column: 1 / 3;
+        }
+
+        .container-btns > .igual {
+            grid-row: 4 / 6;
+            grid-column: 4 / 5;
+        }
+
+        .container-btns > button:hover {
+            background-color: #cacaca;
+            color: #000;
+            cursor: pointer;
+        }
+
+        .btn-voltar {
+            color: white;
+            position: absolute;
+            bottom: 100px;
         }
 
     </style>
@@ -100,54 +92,67 @@
 </head>
 
 <body>
-    
-    <h1>Calculadora JS</h1>
 
-    <form action="#" id="formCalc">
+    <div class="container-calculadora">
 
-        <input type="number" id="input1" value="1">
+        <h1>Calculadora JS</h1>
+  
+        <p id="resultado"></p>
+  
+        <div class="container-btns">
+          <!-- Linha 1 -->
+  
+          <button class="apagar-tudo" onclick="clean()">C</button>
+  
+          <button class="apagar-um" onclick="back()">&lt;</button>
+  
+          <button class="divisao" onclick="inserir('/')">/</button>
+  
+          <button class="multiplicacao" onclick="inserir('*')">X</button>
+  
+          <!-- Linha 2 -->
+  
+          <button class="num7" onclick="inserir('7')">7</button>
+  
+          <button class="num8" onclick="inserir('8')">8</button>
+  
+          <button class="num9" onclick="inserir('9')">9</button>
+  
+          <button class="menos" onclick="inserir('-')">-</button>
+  
+          <!-- Linha 3 -->
+  
+          <button class="num4" onclick="inserir('4')">4</button>
+  
+          <button class="num5" onclick="inserir('5')">5</button>
+  
+          <button class="num6" onclick="inserir('6')">6</button>
+  
+          <button class="mais" onclick="inserir('+')">+</button>
+  
+          <!-- Linha 4 -->
+  
+          <button class="num1" onclick="inserir('1')">1</button>
+  
+          <button class="num2" onclick="inserir('2')">2</button>
+  
+          <button class="num3" onclick="inserir('3')">3</button>
+  
+          <button class="igual" onclick="calcular()">=</button>
+  
+          <!-- Linha 5 -->
+  
+          <button class="num0" onclick="inserir('0')">0</button>
+  
+          <button class="ponto" onclick="inserir('.')">.</button>
 
-        <input type="number" id="input2" value="2">
-
-        
-
-        
-
-    </form>
-    
-    <br>
-
-    <a href="index.html">Voltar</a>
-
-    <div class="container-calc">
-
-        <div id="resultado">
-            0
         </div>
 
-        <button id="num7" class="item-1">7</button>
-        <button id="num8" class="item-2">8</button>
-        <button id="num9" class="item-3">9</button>
+      </div>
 
-        <button id="num4" class="item-5">4</button>
-        <button id="num5" class="item-6">5</button>
-        <button id="num6" class="item-7">6</button>
+      <br>
 
-        <button id="num1" class="item-9">1</button>
-        <button id="num2" class="item-10">2</button>
-        <button id="num3" class="item-11">3</button>
-
-        <button id="num0" class="item-13">0</button>
-        <button id="btnPonto" class="item-14">.</button>
-        <button id="btnResult" class="item-15">=</button>
-
-        <!-- Botões de operação (lateral direita) -->
-        <button id="btnMais" class="item-4">+</button>
-        <button id="btnMenos" class="item-8">-</button>
-        <button id="btnMult" class="item-12">x</button>
-        <button id="btnDiv" class="item-16">/</button>
-
-    </div>
+      <a href="index.html" class="btn-voltar">Voltar</a>
 
     <script src="js/calculadora.js"></script>
 
