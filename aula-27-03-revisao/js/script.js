@@ -33,6 +33,7 @@ var soma = document.getElementById('soma');
 var subtracao = document.getElementById('subtracao');
 var multiplicacao = document.getElementById('multiplicacao');
 var divisao = document.getElementById('divisao');
+var ponto = document.getElementById('ponto');
 var igual = document.getElementById('igual');
 var n9 = document.getElementById('n9');
 var n8 = document.getElementById('n8');
@@ -48,6 +49,7 @@ var n0 = document.getElementById('n0');
 var numero1 = '';
 var numero2 = '';
 var operacao = '';
+var ponto = '';
 
 
 /** ---------------- */
@@ -190,12 +192,23 @@ igual.addEventListener('click', function() {
     }
 });
 
+// ponto.addEventListener('click', function() {
+//     if (operacao == '' && ponto == '') {
+//         numero1 = numero1 + ponto.textContent;
+//         calculo.innerText = numero1;
+//         ponto = '.';
+//     } else {
+
+//     }
+// });
+
 limpar.addEventListener('click', function() {
-    calculo.innerText = "";
-    resultado.innerText = "";
-    numero1 = 0;
-    numero2 = 0;
+    calculo.innerText = '';
+    resultado.innerText = '';
+    numero1 = '';
+    numero2 = '';
     operacao = '';
+    ponto = '';
 });
 
 

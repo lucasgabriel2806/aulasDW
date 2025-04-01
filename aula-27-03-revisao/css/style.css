@@ -54,7 +54,7 @@ table {
     border: 1px solid #8fcf63;
 }
 
-.numeros {
+.numeros, .ponto {
     background-color: #b9cce9;
     color: blue;
     border: 1px solid #98b8e7;
