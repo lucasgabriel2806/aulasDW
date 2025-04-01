@@ -29,10 +29,10 @@ btnMult.addEventListener('click', function() {
 var calculo = document.getElementById('calculo');
 var resultado = document.getElementById('resultado');
 var limpar = document.getElementById('limpar');
-var divisao = document.getElementById('divisao');
-var multiplicacao = document.getElementById('multiplicacao');
-var subtracao = document.getElementById('subtracao');
 var soma = document.getElementById('soma');
+var subtracao = document.getElementById('subtracao');
+var multiplicacao = document.getElementById('multiplicacao');
+var divisao = document.getElementById('divisao');
 var igual = document.getElementById('igual');
 var n9 = document.getElementById('n9');
 var n8 = document.getElementById('n8');
@@ -49,6 +49,10 @@ var numero1 = '';
 var numero2 = '';
 var operacao = '';
 
+
+/** ---------------- */
+/** Números */
+/** ---------------- */
 n0.addEventListener('click', function() {
     if(operacao == '') {
         numero1 = numero1 + n0.textContent;
@@ -69,7 +73,103 @@ n1.addEventListener('click', function() {
     }
 });
 
-// ----------------
+n2.addEventListener('click', function() {
+    if(operacao == '') {
+        numero1 = numero1 + n2.textContent;
+        calculo.innerText = numero1;
+    } else {
+        numero2 = numero2 + n2.textContent;
+        calculo.innerText = numero1 + " " + operacao + " " + numero2;
+    }
+});
+
+n3.addEventListener('click', function() {
+    if(operacao == '') {
+        numero1 = numero1 + n3.textContent;
+        calculo.innerText = numero1;
+    } else {
+        numero2 = numero2 + n3.textContent;
+        calculo.innerText = numero1 + " " + operacao + " " + numero2;
+    }
+});
+
+n4.addEventListener('click', function() {
+    if(operacao == '') {
+        numero1 = numero1 + n4.textContent;
+        calculo.innerText = numero1;
+    } else {
+        numero2 = numero2 + n4.textContent;
+        calculo.innerText = numero1 + " " + operacao + " " + numero2;
+    }
+});
+
+n5.addEventListener('click', function() {
+    if(operacao == '') {
+        numero1 = numero1 + n5.textContent;
+        calculo.innerText = numero1;
+    } else {
+        numero2 = numero2 + n5.textContent;
+        calculo.innerText = numero1 + " " + operacao + " " + numero2;
+    }
+});
+
+n6.addEventListener('click', function() {
+    if(operacao == '') {
+        numero1 = numero1 + n6.textContent;
+        calculo.innerText = numero1;
+    } else {
+        numero2 = numero2 + n6.textContent;
+        calculo.innerText = numero1 + " " + operacao + " " + numero2;
+    }
+});
+
+n7.addEventListener('click', function() {
+    if(operacao == '') {
+        numero1 = numero1 + n7.textContent;
+        calculo.innerText = numero1;
+    } else {
+        numero2 = numero2 + n7.textContent;
+        calculo.innerText = numero1 + " " + operacao + " " + numero2;
+    }
+});
+
+n8.addEventListener('click', function() {
+    if(operacao == '') {
+        numero1 = numero1 + n8.textContent;
+        calculo.innerText = numero1;
+    } else {
+        numero2 = numero2 + n8.textContent;
+        calculo.innerText = numero1 + " " + operacao + " " + numero2;
+    }
+});
+
+n9.addEventListener('click', function() {
+    if(operacao == '') {
+        numero1 = numero1 + n9.textContent;
+        calculo.innerText = numero1;
+    } else {
+        numero2 = numero2 + n9.textContent;
+        calculo.innerText = numero1 + " " + operacao + " " + numero2;
+    }
+});
+
+/** ---------------- */
+/** Operadores */
+/** ---------------- */
+soma.addEventListener('click', function() {
+    operacao = soma.textContent;
+    calculo.innerText = numero1 + " " + operacao + " " + numero2;
+});
+
+subtracao.addEventListener('click', function() {
+    operacao = subtracao.textContent;
+    calculo.innerText = numero1 + " " + operacao + " " + numero2;
+});
+
+multiplicacao.addEventListener('click', function() {
+    operacao = multiplicacao.textContent;
+    calculo.innerText = numero1 + " " + operacao + " " + numero2;
+});
 
 divisao.addEventListener('click', function() {
     operacao = divisao.textContent;
@@ -77,15 +177,26 @@ divisao.addEventListener('click', function() {
 });
 
 igual.addEventListener('click', function() {
-    if (operacao == "/") {
-        resultado.innerText = parseFloat(numero1) / parseFloat(numero2);
+    if (operacao == "+") {
+        resultado.innerText = parseFloat(numero1) + parseFloat(numero2);
+    } else if (operacao == "-") {
+        resultado.innerText = parseFloat(numero1) - parseFloat(numero2);
     } else if (operacao == "*") {
-
+        resultado.innerText = parseFloat(numero1) * parseFloat(numero2);
+    } else if (operacao == "/") {
+        resultado.innerText = parseFloat(numero1) / parseFloat(numero2);
     } else {
         resultado.innerText = "** ERRO **";
     }
-})
+});
 
+limpar.addEventListener('click', function() {
+    calculo.innerText = "";
+    resultado.innerText = "";
+    numero1 = 0;
+    numero2 = 0;
+    operacao = '';
+});
 
 
 /** Colocar números com ponto */
