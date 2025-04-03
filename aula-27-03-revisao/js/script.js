@@ -49,7 +49,7 @@ var n0 = document.getElementById('n0');
 var numero1 = '';
 var numero2 = '';
 var operacao = '';
-var ponto = '';
+var ponto_valor = '';
 
 
 /** ---------------- */
@@ -193,18 +193,26 @@ igual.addEventListener('click', function() {
 });
 
 // ponto.addEventListener('click', function() {
-//     if (operacao == '' && ponto == '') {
-//         numero1 = numero1 + ponto.textContent;
-//         calculo.innerText = numero1;
+    
+//     if (operacao == '') {
+//         if (ponto_valor.length = 0) {
+//             numero1 = numero1 + ponto_valor;
+//             calculo.innerText = numero1;
+//         } else {
+            
+//         }
+        
+        
 //         ponto = '.';
 //     } else {
 
 //     }
+
 // });
 
 limpar.addEventListener('click', function() {
-    calculo.innerText = '';
-    resultado.innerText = '';
+    calculo.innerText = 0;
+    resultado.innerText = 0;
     numero1 = '';
     numero2 = '';
     operacao = '';
