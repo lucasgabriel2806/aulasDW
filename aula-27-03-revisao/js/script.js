@@ -50,110 +50,26 @@ var numero1 = '';
 var numero2 = '';
 var operacao = '';
 var ponto_valor = '';
+var tem_ponto = false;
 
 
 /** ---------------- */
 /** Números */
 /** ---------------- */
-n0.addEventListener('click', function() {
-    if(operacao == '') {
-        numero1 = numero1 + n0.textContent;
-        calculo.innerText = numero1;
-    } else {
-        numero2 = numero2 + n0.textContent;
-        calculo.innerText = numero1 + " " + operacao + " " + numero2;
+document.addEventListener('click', function (event) {
+    console.log(event.target.classList);
+    if (event.target.classList.contains('numeros')) {
+        if(operacao == '') {
+            numero1 = numero1 + event.target.textContent;
+            calculo.innerText = numero1;
+        } else {
+            numero2 = numero2 + event.target.textContent;
+            calculo.innerText = numero1 + " " + operacao + " " + numero2;
+        }
     }
 });
 
-n1.addEventListener('click', function() {
-    if(operacao == '') {
-        numero1 = numero1 + n1.textContent;
-        calculo.innerText = numero1;
-    } else {
-        numero2 = numero2 + n1.textContent;
-        calculo.innerText = numero1 + " " + operacao + " " + numero2;
-    }
-});
 
-n2.addEventListener('click', function() {
-    if(operacao == '') {
-        numero1 = numero1 + n2.textContent;
-        calculo.innerText = numero1;
-    } else {
-        numero2 = numero2 + n2.textContent;
-        calculo.innerText = numero1 + " " + operacao + " " + numero2;
-    }
-});
-
-n3.addEventListener('click', function() {
-    if(operacao == '') {
-        numero1 = numero1 + n3.textContent;
-        calculo.innerText = numero1;
-    } else {
-        numero2 = numero2 + n3.textContent;
-        calculo.innerText = numero1 + " " + operacao + " " + numero2;
-    }
-});
-
-n4.addEventListener('click', function() {
-    if(operacao == '') {
-        numero1 = numero1 + n4.textContent;
-        calculo.innerText = numero1;
-    } else {
-        numero2 = numero2 + n4.textContent;
-        calculo.innerText = numero1 + " " + operacao + " " + numero2;
-    }
-});
-
-n5.addEventListener('click', function() {
-    if(operacao == '') {
-        numero1 = numero1 + n5.textContent;
-        calculo.innerText = numero1;
-    } else {
-        numero2 = numero2 + n5.textContent;
-        calculo.innerText = numero1 + " " + operacao + " " + numero2;
-    }
-});
-
-n6.addEventListener('click', function() {
-    if(operacao == '') {
-        numero1 = numero1 + n6.textContent;
-        calculo.innerText = numero1;
-    } else {
-        numero2 = numero2 + n6.textContent;
-        calculo.innerText = numero1 + " " + operacao + " " + numero2;
-    }
-});
-
-n7.addEventListener('click', function() {
-    if(operacao == '') {
-        numero1 = numero1 + n7.textContent;
-        calculo.innerText = numero1;
-    } else {
-        numero2 = numero2 + n7.textContent;
-        calculo.innerText = numero1 + " " + operacao + " " + numero2;
-    }
-});
-
-n8.addEventListener('click', function() {
-    if(operacao == '') {
-        numero1 = numero1 + n8.textContent;
-        calculo.innerText = numero1;
-    } else {
-        numero2 = numero2 + n8.textContent;
-        calculo.innerText = numero1 + " " + operacao + " " + numero2;
-    }
-});
-
-n9.addEventListener('click', function() {
-    if(operacao == '') {
-        numero1 = numero1 + n9.textContent;
-        calculo.innerText = numero1;
-    } else {
-        numero2 = numero2 + n9.textContent;
-        calculo.innerText = numero1 + " " + operacao + " " + numero2;
-    }
-});
 
 /** ---------------- */
 /** Operadores */
@@ -192,23 +108,55 @@ igual.addEventListener('click', function() {
     }
 });
 
-// ponto.addEventListener('click', function() {
+ponto.addEventListener('click', function() {
     
-//     if (operacao == '') {
-//         if (ponto_valor.length = 0) {
-//             numero1 = numero1 + ponto_valor;
-//             calculo.innerText = numero1;
-//         } else {
+    if (operacao == '') {
+
+        if (tem_ponto == false) {
+
+            numero1 = numero1 + '.';
+            calculo.innerText = numero1;
+            tem_ponto = true;
+
+        } else if (tem_ponto == true) {
+
+            console.log('Já tem ponto');
+
+        }
+
+    } else {
+
+        
+
+        if (tem_ponto == false) {
+
+            numero1 = numero1 + '.';
+            calculo.innerText = numero1;
+            tem_ponto = true;
+
+        } else if (tem_ponto == true) {
+
+            console.log('Já tem ponto');
+
+        }
+
+    }
+
+    // if (operacao == '') {
+    //     if (ponto_valor.length = 0) {
+    //         numero1 = numero1 + ponto_valor;
+    //         calculo.innerText = numero1;
+    //     } else {
             
-//         }
+    //     }
         
         
-//         ponto = '.';
-//     } else {
+    //     ponto = '.';
+    // } else {
 
-//     }
+    // }
 
-// });
+});
 
 limpar.addEventListener('click', function() {
     calculo.innerText = 0;
