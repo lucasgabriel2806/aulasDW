@@ -24,7 +24,7 @@ btnMult.addEventListener('click', function() {
     resultado2.innerText = 'Resultado: ' + (parseFloat(num1.value) * parseFloat(num2.value));
 });
 
-// ------------------------------------------------------------
+// ------------------------------------------------------------ 
 
 var calculo = document.getElementById('calculo');
 var resultado = document.getElementById('resultado');
@@ -75,23 +75,32 @@ document.addEventListener('click', function (event) {
 /** Operadores */
 /** ---------------- */
 soma.addEventListener('click', function() {
-    operacao = soma.textContent;
-    calculo.innerText = numero1 + " " + operacao + " " + numero2;
+    /** Verificando se existe o 1º número para colocar as operações */
+    if(numero1 !== '') {
+        operacao = soma.textContent;
+        calculo.innerText = numero1 + " " + operacao + " " + numero2;
+    }
 });
 
 subtracao.addEventListener('click', function() {
-    operacao = subtracao.textContent;
-    calculo.innerText = numero1 + " " + operacao + " " + numero2;
+    if(numero1 !== '') {
+        operacao = subtracao.textContent;
+        calculo.innerText = numero1 + " " + operacao + " " + numero2;
+    } 
 });
 
 multiplicacao.addEventListener('click', function() {
-    operacao = multiplicacao.textContent;
-    calculo.innerText = numero1 + " " + operacao + " " + numero2;
+    if(numero1 !== '') {
+        operacao = multiplicacao.textContent;
+        calculo.innerText = numero1 + " " + operacao + " " + numero2;
+    }
 });
 
 divisao.addEventListener('click', function() {
-    operacao = divisao.textContent;
-    calculo.innerText = numero1 + " " + operacao + " " + numero2;
+    if(numero1 !== '') {
+        operacao = divisao.textContent;
+        calculo.innerText = numero1 + " " + operacao + " " + numero2;
+    }
 });
 
 igual.addEventListener('click', function() {
@@ -104,7 +113,7 @@ igual.addEventListener('click', function() {
     } else if (operacao == "/") {
         resultado.innerText = parseFloat(numero1) / parseFloat(numero2);
     } else {
-        resultado.innerText = "** ERRO **";
+        resultado.innerText = numero1;
     }
 });
 
@@ -112,34 +121,51 @@ ponto.addEventListener('click', function() {
     
     if (operacao == '') {
 
-        if (tem_ponto == false) {
+        /** Impedindo de colocar (.) em 0 */
+        if(numero1 == '' || numero1 == 0) {
 
-            numero1 = numero1 + '.';
-            calculo.innerText = numero1;
-            tem_ponto = true;
+            alert('Não é possível por ponto em 0.');
+            console.log('Não é possível por ponto em 0.');
+        
+        } else {
+            /** Adicionando (.) para o primeiro número */
+            if (tem_ponto == false) {
 
-        } else if (tem_ponto == true) {
+                numero1 = numero1 + '.';
+                calculo.innerText = numero1;
+                tem_ponto = true;
 
-            console.log('Já tem ponto');
+            } else if (tem_ponto == true) {
 
+                alert('Já tem ponto');
+                console.log('Já tem ponto');
+
+            }
         }
 
     } else {
 
-        
+        /** Impedindo de colocar (.) em 0 */
+        if(numero2 == '' || numero2 == 0) {
 
-        if (tem_ponto == false) {
+            alert('Não é possível por ponto em 0.');
+            console.log('Não é possível por ponto em 0.');
 
-            numero1 = numero1 + '.';
-            calculo.innerText = numero1;
-            tem_ponto = true;
+        } else {
+            /** Adicionando (.) para o segundo número */
+            if (tem_ponto == false) {
 
-        } else if (tem_ponto == true) {
+                numero2 = numero2 + '.';
+                calculo.innerText = numero1;
+                tem_ponto = true;
 
-            console.log('Já tem ponto');
+            } else if (tem_ponto == true) {
 
+                console.log('Já tem ponto');
+
+            }
         }
-
+            
     }
 
     // if (operacao == '') {
