@@ -41,7 +41,7 @@ table {
     border-right: 1px solid #ccc;  
 }
 
-.btn.limpar {
+.btn.limpar, .btn.limpar1 {
     background-color: #f8ad9f;
     color: crimson;
     font-size: 40px;

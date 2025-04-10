@@ -29,6 +29,7 @@ btnMult.addEventListener('click', function() {
 var calculo = document.getElementById('calculo');
 var resultado = document.getElementById('resultado');
 var limpar = document.getElementById('limpar');
+var limpar1 = document.getElementById('limpar1');
 var soma = document.getElementById('soma');
 var subtracao = document.getElementById('subtracao');
 var multiplicacao = document.getElementById('multiplicacao');
@@ -50,7 +51,8 @@ var numero1 = '';
 var numero2 = '';
 var operacao = '';
 var ponto_valor = '';
-var tem_ponto = false;
+var tem_ponto1 = false;
+var tem_ponto2 = false;
 
 
 /** ---------------- */
@@ -58,6 +60,7 @@ var tem_ponto = false;
 /** ---------------- */
 document.addEventListener('click', function (event) {
     console.log(event.target.classList);
+    
     if (event.target.classList.contains('numeros')) {
         if(operacao == '') {
             numero1 = numero1 + event.target.textContent;
@@ -67,6 +70,8 @@ document.addEventListener('click', function (event) {
             calculo.innerText = numero1 + " " + operacao + " " + numero2;
         }
     }
+
+    //console.log('calculo: ' + calculo.innerText.split(''));
 });
 
 
@@ -112,6 +117,8 @@ igual.addEventListener('click', function() {
         resultado.innerText = parseFloat(numero1) * parseFloat(numero2);
     } else if (operacao == "/") {
         resultado.innerText = parseFloat(numero1) / parseFloat(numero2);
+    } else if (numero1 == '') {
+        resultado.innerText = 0;
     } else {
         resultado.innerText = numero1;
     }
@@ -129,16 +136,15 @@ ponto.addEventListener('click', function() {
         
         } else {
             /** Adicionando (.) para o primeiro número */
-            if (tem_ponto == false) {
+            if (tem_ponto1 == false) {
 
                 numero1 = numero1 + '.';
                 calculo.innerText = numero1;
-                tem_ponto = true;
+                tem_pont1 = true;
 
-            } else if (tem_ponto == true) {
+            } else if (tem_ponto1 == true) {
 
                 alert('Já tem ponto');
-                console.log('Já tem ponto');
 
             }
         }
@@ -153,15 +159,15 @@ ponto.addEventListener('click', function() {
 
         } else {
             /** Adicionando (.) para o segundo número */
-            if (tem_ponto == false) {
+            if (tem_ponto2 == false) {
 
                 numero2 = numero2 + '.';
-                calculo.innerText = numero1;
-                tem_ponto = true;
+                calculo.innerText = numero1 + " " + operacao + " " + numero2;
+                tem_ponto2 = true;
 
-            } else if (tem_ponto == true) {
+            } else if (tem_ponto2 == true) {
 
-                console.log('Já tem ponto');
+                alert('Já tem ponto');
 
             }
         }
@@ -191,10 +197,16 @@ limpar.addEventListener('click', function() {
     numero2 = '';
     operacao = '';
     ponto = '';
+    tem_ponto1 = false;
+    tem_ponto2 = false;
+});
+
+limpar1.addEventListener('click', function() {
+    // const listaCalculo = calculo.innerText.split('');
 });
 
 
-/** Colocar números com ponto */
-/** Colocar demais funções dos botões */
+/** AFAZERES */
+/** Botão para apagar um número só */
 
 
