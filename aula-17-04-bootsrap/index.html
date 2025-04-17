@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pilotos F1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <h1>Pilotos F1</h1>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container mt-5">
+        <div class="row d-flex align-items-stretch">
+            <div class="col-sm-6 col-md-4"> 
+                <div class="card">
+                    <img src="img/bortoleto.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Gabriel Bortoleto</h5>
+                      <p class="card-text">Automobilista Brasileiro recente na Formula 1, piloto da Sauber</p>
+                      <a href="#" class="btn btn-primary">Leia Mais</a>
+                    </div>
+                  </div>    
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="card">
+                    <img src="img/hamilton.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Lewis Hamilton</h5>
+                      <p class="card-text">Automobilista Britanico com sete títulos mundiais, piloto da Ferrari</p>
+                      <a href="#" class="btn btn-primary">Leia Mais</a>
+                    </div>
+                  </div>    
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="card">
+                    <img src="img/verstappen.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Max Verstappen</h5>
+                      <p class="card-text">Automobilista Holandes com quatro títulos mundiais, piloto da Red Bull Racing</p>
+                      <a href="#" class="btn btn-primary">Leia Mais</a>
+                    </div>
+                </div>    
+            </div>
+
+            <!-- SEGUNDA LINHA -->
+            <div class="col-sm-6 col-md-4"> 
+                <div class="card">
+                    <img src="img/senna.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Ayrton Senna</h5>
+                      <p class="card-text">Automobilista Brasileiro com 3 títulos mundiais, piloto da McLaren</p>
+                      <a href="#" class="btn btn-primary">Leia Mais</a>
+                    </div>
+                  </div>    
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="card">
+                    <img src="img/mansell.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Nigel Mansell</h5>
+                      <p class="card-text">Automobilista Britanico com 1 título mundial, piloto da Willians</p>
+                      <a href="#" class="btn btn-primary">Leia Mais</a>
+                    </div>
+                  </div>    
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="card">
+                    <img src="img/schumacher.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Michael Schumacher</h5>
+                      <p class="card-text">Automobilista Alemão com sete títulos mundiais, piloto da Ferrari</p>
+                      <a href="#" class="btn btn-primary">Leia Mais</a>
+                    </div>
+                </div>    
+            </div>
+        </div>
+      </div> <!-- FIM ROW -->
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Equipe</th>
+            <th scope="col">Títulos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Lewis Hamilton</td>
+            <td>Ferrari</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Michael Schumacher</td>
+            <td>Ferrari</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Max Verstappen</td>
+            <td>Red Bull Racing</td>
+            <td>4</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <a href="componentes.html">Componentes</a>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  </body>
+</html> 
