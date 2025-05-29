@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <h1 onclick="alert('Clicou no H1')">Formulário de Endereço</h1>
+
+    <form action="#" method="post" id="formEndereco">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome"><br><br>
+
+        <label for="cep">CEP:</label><br>
+        <input type="text" id="cep" name="cep"><br><br>
+
+        <label for="rua">Rua:</label><br>
+        <input type="text" id="rua" name="rua"><br><br>
+
+        <label for="numero">Número:</label><br>
+        <input type="text" id="numero" name="numero"><br><br>
+
+        <label for="bairro">Bairro:</label><br>
+        <input type="text" id="bairro" name="bairro"><br><br>
+
+        <label for="cidade">Cidade:</label><br>
+        <input type="text" id="cidade" name="cidade"><br><br>
+
+        <label for="estado">Estado:</label><br>
+        <input type="text" id="estado" name="estado"><br><br>
+
+        <input type="submit" value="Enviar">
+
+        <h1>Valores informados</h1>
+
+        <div>
+            <p id="nomeText"></p>
+            <p id="ruaText"></p>
+            <p id="numeroText"></p>
+            <p id="bairroText"></p>
+            <p id="cidadeText"></p>
+            <p id="estadoText"></p>
+            <p id="cepText"></p>
+        </div>
+    </form>
+
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
