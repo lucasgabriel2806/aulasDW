@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Animação CSS</title>
+
+    <style>
+
+        /** 
+        
+        A Animação envolve a captura da transição das propriedades CSS. 
+        
+        A animação não tranforma o elemento, ele modifica e volta para o que ele era antes.
+
+        */
+
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            border-radius: 20px;
+        }
+
+        p {
+            font-size: 1.5em;
+        }
+        
+        .red {
+            background: rgb(243, 67, 67);
+        }
+
+        .cyan {
+            background: #23ccdb;
+        }
+
+        .green {
+            background: rgb(77, 200, 77);
+        }
+
+        .louquinho {
+            animation-name: loucura;
+            animation-duration: 2s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        .easeout {
+            animation: correr 2s ease-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-delay: 1sg;
+        }
+
+        .easein {
+            animation: correr 2s ease-in;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        
+        @keyframes correr {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(500px);
+            }
+        }
+
+        @keyframes loucura {
+            0% {
+                transform: translateX(0) scale(2);
+            }
+
+            25% {
+                transform: translateX(calc(100vw - 200px)) rotate(90deg);
+            }
+
+            50% {
+                transform: translate(0, calc(100vh - 200px)) rotate(180deg);
+            }
+
+            100% {
+                transform: translate(calc(100vw - 200px), calc(100vh - 200px)) scale(0.5);
+            }
+        }
+        
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box louquinho cyan">
+
+        <p>Personalizado</p>
+
+    </div>
+
+    <div class="box red easeout">
+
+        <p>Ease out</p>
+
+    </div>
+
+    <div class="box green easein">
+
+        <p>Ease in</p>
+
+    </div>
+    
+</body>
+
+</html>
